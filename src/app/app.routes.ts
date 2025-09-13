@@ -5,5 +5,9 @@ export const routes: Routes = [
 	{
 		path: '',
 		component: BeatsPageComponent
+	},
+	{
+		path: '**',
+		redirectTo: ''
 	}
 ];
