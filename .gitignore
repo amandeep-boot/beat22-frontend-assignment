@@ -13,7 +13,8 @@
 .junie/
 .kiro/
 .windsurf/
-
+.github/
+.vscode/
 # Node
 /node_modules
 npm-debug.log
