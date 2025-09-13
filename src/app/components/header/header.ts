@@ -83,34 +83,43 @@ import { CommonModule } from '@angular/common';
           <div class="separator-top"></div>
           <div class="nav-dropdown">
             <button class="beats-nav-btn">BEATS</button>
-            <div class="dropdown-menu">
-              <div class="dropdown-header">
-                <h3>BEATS</h3>
-              </div>
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item active">
+            <div class="dropdown-menu beats-dropdown">
+              <div class="dropdown-content beats-grid">
+                <a href="#" class="dropdown-item">
                   <span class="material-icons">music_note</span>
                   All Beats
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="material-icons">new_releases</span>
+                  New Finds
                 </a>
                 <a href="#" class="dropdown-item trending">
                   <span class="material-icons">trending_up</span>
                   Trending Beats
                 </a>
                 <a href="#" class="dropdown-item">
-                  <span class="material-icons">new_releases</span>
-                  New Finds
-                </a>
-                <a href="#" class="dropdown-item">
                   <span class="material-icons">playlist_play</span>
                   All Playlists
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="material-icons">audiotrack</span>
+                  Beat
                 </a>
                 <a href="#" class="dropdown-item">
                   <span class="material-icons">person</span>
                   For Hip-Hop Artists
                 </a>
                 <a href="#" class="dropdown-item">
+                  <span class="material-icons">playlist_play</span>
+                  Beats With Hook
+                </a>
+                <a href="#" class="dropdown-item">
                   <span class="material-icons">person</span>
                   For Pop Artists
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="material-icons">shuffle</span>
+                  Switch Beats
                 </a>
                 <a href="#" class="dropdown-item">
                   <span class="material-icons">person</span>
@@ -174,6 +183,10 @@ import { CommonModule } from '@angular/common';
       width : 95vw;  
     }
 
+    .beats-section .nav-dropdown {
+      position: relative;
+    }
+
     .separator-top,
     .separator-bottom {
       width: 95vw;
@@ -182,7 +195,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .nav-dropdown {
-      position: relative;
+      position: static;
     }
 
     .beats-nav-btn {
@@ -206,16 +219,24 @@ import { CommonModule } from '@angular/common';
       position: absolute;
       top: 100%;
       left: 0;
-      background: #2a2a2a;
-      border: 1px solid #444;
-      border-radius: 12px;
+      background: #1e1e1e;
+      border: none;
+      border-radius: 0;
       min-width: 280px;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
       transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      margin-top: 0.5rem;
+      box-shadow: none;
+      margin-top: 0;
+    }
+
+    .beats-dropdown {
+      background: #1e1e1e;
+      border: none;
+      border-radius: 0;
+      width: 100vw;
+      // left: -2.5vw;
     }
 
     .nav-dropdown:hover .dropdown-menu {
@@ -225,50 +246,64 @@ import { CommonModule } from '@angular/common';
     }
 
     .dropdown-header {
-      padding: 1.5rem 1.5rem 1rem;
-      border-bottom: 1px solid #444;
+      padding: 1rem 0 0.5rem;
+      border-bottom: 1px solid #333;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 95vw;
     }
 
     .dropdown-header h3 {
       color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 600;
       margin: 0;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      padding-left: 2rem;
     }
 
     .dropdown-content {
       padding: 1rem 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100vw;
+    }
+
+    .beats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 0 2rem;
     }
 
     .dropdown-item {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      padding: 0.75rem 1.5rem;
-      color: #bbb;
+      gap: 0.75rem;
+      padding: 0.6rem 1rem;
+      color: #fff;
       text-decoration: none;
-      transition: all 0.2s;
-      font-size: 0.9rem;
+      transition: background 0.15s ease;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      margin: 0.1rem;
     }
 
-    .dropdown-item:hover {
-      background: #333;
-      color: #fff;
-    }
+    // .dropdown-item:hover {
+    //   background: #3a3a3a;
+    // }
 
     .dropdown-item.active {
-      background: #444;
-      color: #fff;
+      background: #3a3a3a;
     }
 
-    .dropdown-item.trending {
-      background: rgba(122, 95, 255, 0.15);
-      color: #7A5FFF;
-    }
+    // .dropdown-item.trending {
+    //   background: #3a3a3a;
+    // }
 
     .dropdown-item .material-icons {
-      font-size: 20px;
+      font-size: 16px;
+      color: #f44336;
     }
 
     .center-section {

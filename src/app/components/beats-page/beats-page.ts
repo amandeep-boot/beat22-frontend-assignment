@@ -18,10 +18,10 @@ import { BeatListComponent } from '../beat-list/beat-list';
         </div>
         
         <div class="category-pills">
-          <button class="pill active">Trending Beats</button>
-          <button class="pill">WAV under ₹999</button>
-          <button class="pill">Wav + Stems under ₹1,999</button>
-          <button class="pill">Beats with Exclusive</button>
+          <button class="pill pill-trending">Trending Beats</button>
+          <button class="pill pill-wav">WAV under ₹999</button>
+          <button class="pill pill-stems">Wav + Stems under ₹1,999</button>
+          <button class="pill pill-exclusive">Beats with Exclusive</button>
         </div>
         
         <app-filter-bar 
@@ -101,8 +101,23 @@ import { BeatListComponent } from '../beat-list/beat-list';
     }
 
     .pill:hover {
-      background: #333;
       color: #fff;
+    }
+
+    .pill-trending:hover {
+      background: #7A5FFF;
+    }
+
+    .pill-wav:hover {
+      background: #2196F3;
+    }
+
+    .pill-stems:hover {
+      background: #E91E63;
+    }
+
+    .pill-exclusive:hover {
+      background: #FF9800;
     }
 
     .pill.active {
