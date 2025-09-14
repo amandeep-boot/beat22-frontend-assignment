@@ -138,7 +138,7 @@ import { CommonModule } from '@angular/common';
       background: #1e1e1e;
       border-bottom: 1px solid #333;
       position: relative;
-      z-index: 1000;
+      z-index: 9999;
     }
 
     .top-row {
@@ -149,10 +149,12 @@ import { CommonModule } from '@angular/common';
       align-items: center;
       justify-content: space-between;
       width : 95vw ; 
+      overflow: visible;
     }
     .top-row-left{
       display :flex ;
       gap : 4rem   ;
+      overflow: visible;
     }
     
     .bottom-row {
@@ -319,7 +321,7 @@ import { CommonModule } from '@angular/common';
       background: #2a2a2a;
       border: 1px solid #444;
       border-radius: 8px;
-      overflow: hidden;
+      overflow: visible;
       transition: border-color 0.3s ease;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
@@ -363,10 +365,12 @@ import { CommonModule } from '@angular/common';
       align-items: center;
       background: #333;
       border-radius: 0 6px 6px 0;
+      // z-index : 20000 ; 
     }
 
     .custom-dropdown {
       position: relative;
+      z-index: 10001;
     }
 
     .filter-button {
@@ -394,7 +398,7 @@ import { CommonModule } from '@angular/common';
       pointer-events: none;
     }
 
-    .dropdown-menu {
+    .custom-dropdown .dropdown-menu {
       position: absolute;
       top: 100%;
       right: 0;
@@ -404,7 +408,7 @@ import { CommonModule } from '@angular/common';
       min-width: 180px;
       max-height: 300px;
       overflow: hidden;
-      z-index: 1000;
+      z-index: 10002;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
@@ -412,7 +416,7 @@ import { CommonModule } from '@angular/common';
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .dropdown-menu.show {
+    .custom-dropdown .dropdown-menu.show {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -425,18 +429,24 @@ import { CommonModule } from '@angular/common';
     .dropdown-option {
       padding: 0.75rem 1rem;
       color: #fff;
+      background: #2a2a2a;
       cursor: pointer;
       transition: background 0.2s;
       font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .dropdown-option:hover {
-      background: #333;
+      background: #3a3a3a;
     }
 
     .dropdown-option.selected {
-      background: #333;
+      background: #3a3a3a;
       font-weight: 500;
+    }
+
+    .dropdown-option:last-child {
+      border-bottom: none;
     }
 
     .auth {
