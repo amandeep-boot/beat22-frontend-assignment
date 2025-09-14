@@ -1,60 +1,74 @@
-# Beat22Beats
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+# Beat22 Frontend Assignment
 
-## Development server
+Live Demo: [beat22-frontend-assignment.vercel.app](https://beat22-frontend-assignment.vercel.app/)
 
-To start a local development server, run:
+This project is an Angular-based frontend clone of the Beat22 Beats page. It fetches trending beats from a public API and replicates the look and functionality of the original site, including filtering, music preview, and responsive design.
 
-```bash
+## Features
+- Explore trending beats with grid and list views
+- Music preview player for each beat card
+- Filter beats by genre, mood, tempo, key, and more
+- Search and sort functionality
+- Responsive, modern UI using Angular Material and SCSS
+
+## Tech Stack
+- Angular (standalone components, signals)
+- Angular Material
+- TypeScript
+- SCSS
+- RxJS
+- HTML5 Audio
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Installation
+1. Clone the repository:
+	 ```sh
+	 git clone https://github.com/amandeep-boot/beat22-frontend-assignment.git
+	 cd beat22-frontend-assignment
+	 ```
+2. Install dependencies:
+	 ```sh
+	 npm install
+	 ```
+
+### Development Server
+Start the Angular development server with proxy for API requests:
+```sh
 ng serve
 ```
+The app will be available at `http://localhost:4200`.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Proxy Configuration
+API requests to `/api` are proxied to the Beat22 backend using `src/proxy.conf.json`. This bypasses CORS issues during local development.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## Project Structure
+```
+src/app/
+	components/
+		beat-list/
+		beat-card/
+		beats-page/
+		filter-bar/
+		header/
+	models/
+		beat.interface.ts
+	services/
+		beats.ts
+	app.ts
+	app.routes.ts
+	app.config.ts
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Customization
+- Update API endpoints in `beats.ts` if needed.
+- Modify SCSS for custom theming.
+- Extend filter-bar and beat-list for more advanced features.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# beat22-frontend-assignment
+## License
+This project is for educational/demo purposes only.
