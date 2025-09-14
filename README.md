@@ -65,10 +65,6 @@ src/app/
 	app.config.ts
 ```
 
-## Customization
-- Update API endpoints in `beats.ts` if needed.
-- Modify SCSS for custom theming.
-- Extend filter-bar and beat-list for more advanced features.
 
 ## License
 This project is for educational/demo purposes only.
