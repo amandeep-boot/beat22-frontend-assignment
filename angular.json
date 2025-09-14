@@ -61,7 +61,8 @@
               "buildTarget": "beat22-beats:build:production"
             },
             "development": {
-              "buildTarget": "beat22-beats:build:development"
+              "buildTarget": "beat22-beats:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
